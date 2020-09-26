@@ -15,12 +15,14 @@ var formSubmitHandler = function(event) {
     // reset input to an empty string
     cityNameEl.value = "";
     // pass currentCity into getCoordinates() function
-    getCoordinates(currentCity);
+    getInfo(currentCity);
 };
 //click event listener for city search
 inputEl.addEventListener("submit", formSubmitHandler);
 
-
+var getInfo = function() {
+    
+}
 
 
 
