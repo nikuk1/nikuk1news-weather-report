@@ -11,42 +11,39 @@
     <title>nikuk1 weather dashboard</title>
 </head>
 <body>
+    <!-- header -->
     <header>
         <h1 class="card-header p-3 bg-dark">Weather dashboard</h1>
     </header>
-
+    <!-- main -->
     <main>
-        <!-- Container for eerything data, data that will be  -->
+        <!-- Container for everything data, data that will be pulled in java file  -->
         <div class="container w-auto p-3">
             <div class="row">
                 <div class="col-lg-3 col-md-12">
                     <h4>Search for a City:</h4>
                     <!-- Search form -->
-                    <!-- 'action=' is the path initiated when search is pressed -->
-                    <form class="example" action="action_page.php" id="input" autocomplete="off">
+                    <form class="example" id="input" autocomplete="off">
+                        <!-- Button w search icon -->
                         <input type="text" id = "city" placeholder="Name of City">
                         <button type="submit" id="submit"><i class="fa fa-search"></i></button>
                     </form>
                     <!-- local storage search history -->
                     <ul class="list-group" id="history"></ul>
                 </div>
-                    <div class="col-lg-9 col-md-12">
-                    <!-- today's information (City, date, temp, humidity, wind, uv) -->
-                    <div id="todays-forecast"></div>
-                    <h5 id="five-day-title"></h5>
-                    <!-- five day forecast -->
-                    <div class="d-flex flex-row justify-content-around align-items-center p-3 flex-wrap" id="five-day-forecast">
-                    </div>
-                    </div>
-
+                <div class="col-lg-9 col-md-12">
+                <!-- today's information (City, date, temp, humidity, wind, uv) -->
+                <div id="information"></div>
+                <h5 id="five-day-header"></h5>
+                <!-- five day forecast -->
+                <div class="d-flex flex-row justify-content-around align-items-center p-3 flex-wrap" id="five-day-forecast">
+                </div>
+                </div>
             </div>
         </div>
-
     </main>
-
-
+    <!-- Javascript sheet calls -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
-
 </body>
 </html>
